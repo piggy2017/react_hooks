@@ -2,7 +2,7 @@
  * @Author: 孙林 1164700321@qq.com
  * @Date: 2024-06-08 17:09:03
  * @LastEditors: 孙林
- * @LastEditTime: 2024-06-08 17:48:43
+ * @LastEditTime: 2024-07-01 15:14:51
  * @Description: 
  */
 
@@ -59,7 +59,7 @@ const UseMemoCom = () => {
             <p>1、memo中的props的比较机制:memo会对每一个prop进行Object.is()比较新旧值,返回true就是没有改变,不需要更新.</p>
             <p>2、简单数据类型:Object.is(3,3)---true,没有改变.</p>
             <p>3、引用数据类型:Object.is(name:"张三",name:"张三")---false,引用地址不同,需要更新.显示问题,真实需要把name放在大括号里面</p>
-            <p>4、保证引用稳定不更新,1、可以用useMemo缓存传入子组件的引用类型数据,2、使用useState生成的数组、对象传入子组件中也不会出发更新.</p>
+            <p>4、保证引用稳定不更新,1、可以用useMemo缓存传入子组件的引用类型数据,2、使用useState生成的数组、对象传入子组件中也不会触发更新.</p>
             <Child />
             <MemoChild list={list} list2={list2}/>
         </div>
