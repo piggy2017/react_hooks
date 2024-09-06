@@ -2,7 +2,7 @@
  * @Author: 孙林 1164700321@qq.com
  * @Date: 2024-06-08 17:09:03
  * @LastEditors: 孙林
- * @LastEditTime: 2024-07-01 15:20:15
+ * @LastEditTime: 2024-09-06 16:08:55
  * @Description: 
  */
 
@@ -31,7 +31,7 @@ const UseCallback = () => {
     // 使用useCallback包裹函数,只有当依赖项发生变化时,才会重新创建函数
     const handleChange = useCallback((value) => { // useCallback的第一个参数是一个函数,第二个参数是一个数组,数组中的每一项都是一个依赖项,只有依赖项发生变化时,才会重新创建函数
         console.log('在父组件中获取到的值:', value);
-    }, [])
+    }, [count])   // 空数组时,调用setCount不会引起子组件的重复渲染,数组为[count]时,每次setCount都会引起子组件的重复渲染
 
     console.log('父组件渲染了');
 
